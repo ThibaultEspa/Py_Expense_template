@@ -3,3 +3,7 @@ amount, label,spender,users
 2,a,SIGL,"['RDuval', 'Luca']"
 5,Coca,Pierre,"['SIGL', 'Luca']"
 2,subway,Pierre,['SIGL']
+2,alcool,Thibault,"['SIGL', 'Pierre']"
+7,Remboursement,Luca,"['Thibault', 'Pierre']"
+23,sxqs,Thibault,"['SIGL', 'PChojka']"
+3,dsq,Thibault,"['PChojka', '2']"

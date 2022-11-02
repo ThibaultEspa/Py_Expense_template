@@ -14,7 +14,6 @@ def show():
         for item in DictReader_obj:
             users[item['spender']] += float(item['amount'])
             for us in item['users'][0:len(item['users'])-1].split(','):
-                print(users[us[2:len(us)-1]])
                 users[us[2:len(us)-1]] = users[us[2:len(us)-1]] - float(item['amount']) / len(item['users'].split(','))
             # print(item)
     print('Balance : ',users)

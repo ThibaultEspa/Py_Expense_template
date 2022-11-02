@@ -20,9 +20,10 @@ expense_questions = [
         "message":"New Expense - Label: ",
     },
     {
-        "type":"input",
+        "type":"list",
         "name":"spender",
         "message":"New Expense - Spender: ",
+        "choices" : user_choice,
     },
     {
         "type":"checkbox",
@@ -30,14 +31,19 @@ expense_questions = [
         "message":"for who ?",
         "choices": user_choice,
         'validate': lambda answer: 'You must choose at least one topping.' \
-            if len(answer) == 0 | answer[''] else True
+            if len(answer) == 0 else True
     }
 ]
-
 
 nom_colonnes =['amount','label','spender', 'user']
 def new_expense(*args):
     infos = prompt(expense_questions)
+    if (infos['amount'].isdigit() == False):
+        print("Amount should be a number")
+        return False
+    if (infos['user'] == []):
+        print("For who : You must at least choose one person")
+        return False
     fichier = open('expense_report.csv','a')
     with fichier:    
         obj = csv.DictWriter(fichier, fieldnames=nom_colonnes)
