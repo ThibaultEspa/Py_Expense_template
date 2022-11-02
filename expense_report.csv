@@ -1,0 +1,5 @@
+amount, label,spender,users
+7,Coca bien,SIGL,"['RDuval', 'Luca']"
+2,a,SIGL,"['RDuval', 'Luca']"
+5,Coca,Pierre,"['SIGL', 'Luca']"
+2,subway,Pierre,['SIGL']
